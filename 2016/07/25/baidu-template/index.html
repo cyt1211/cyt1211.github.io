@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Sunny Day</title>
+  <title>baiduTemplate的使用---百度JS模板引擎 baiduTemplate | Sunny Day</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -19,15 +19,15 @@
 
 2.特性1、语法简单，学习成本极低，开发效率提升很大，性价比较高（使用Javascript原生语法）；2、默认HTML转义（防XSS攻击），并且支持包括URL转义等多种转义；3、变量未定义自动输出为空">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sunny Day">
+<meta property="og:title" content="baiduTemplate的使用---百度JS模板引擎 baiduTemplate">
 <meta property="og:url" content="http://yoursite.com/2016/07/25/baidu-template/index.html">
 <meta property="og:site_name" content="Sunny Day">
 <meta property="og:description" content="baiduTemplate的使用—百度JS模板引擎 baiduTemplate1.功能提供一套模板语法，用户可以写一个模板区块，每次根据传入的数据，生成对应数据产生的HTML片段，渲染不同的效果。
 
 2.特性1、语法简单，学习成本极低，开发效率提升很大，性价比较高（使用Javascript原生语法）；2、默认HTML转义（防XSS攻击），并且支持包括URL转义等多种转义；3、变量未定义自动输出为空">
-<meta property="og:updated_time" content="2016-07-25T11:32:50.461Z">
+<meta property="og:updated_time" content="2016-07-25T11:49:07.377Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sunny Day">
+<meta name="twitter:title" content="baiduTemplate的使用---百度JS模板引擎 baiduTemplate">
 <meta name="twitter:description" content="baiduTemplate的使用—百度JS模板引擎 baiduTemplate1.功能提供一套模板语法，用户可以写一个模板区块，每次根据传入的数据，生成对应数据产生的HTML片段，渲染不同的效果。
 
 2.特性1、语法简单，学习成本极低，开发效率提升很大，性价比较高（使用Javascript原生语法）；2、默认HTML转义（防XSS攻击），并且支持包括URL转义等多种转义；3、变量未定义自动输出为空">
@@ -97,7 +97,7 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#baiduTemplate的使用—百度JS模板引擎-baiduTemplate"><span class="toc-text">baiduTemplate的使用—百度JS模板引擎 baiduTemplate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">没有list数据</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#baiduTemplate的使用—百度JS模板引擎-baiduTemplate"><span class="toc-text">baiduTemplate的使用—百度JS模板引擎 baiduTemplate</span></a></li></ol>
   </div>
 
 
@@ -105,7 +105,7 @@
 <div class="content content-post CENTER">
    <article id="post-baidu-template" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">(no title)</h1>
+    <h1 class="post-title">baiduTemplate的使用---百度JS模板引擎 baiduTemplate</h1>
 
     <div class="article-meta">
       <span>
@@ -149,17 +149,7 @@
 &lt;!-- 我是注释，语法均为Javascript原生语法，默认分割符为 &lt;% %&gt; ，也可以自定义，参见API部分   --&gt;
     &lt;!-- 输出变量语句，输出title --&gt;
     &lt;h1&gt;title:&lt;%=title%&gt;&lt;/h1&gt;
-    &lt;!-- 判断语句if else--&gt;
-    &lt;%if(list.length&gt;1) { %&gt;
-        &lt;h2&gt;输出list，共有&lt;%=list.length%&gt;个元素&lt;/h2&gt;
-        &lt;ul&gt;
-            &lt;!-- 循环语句 for--&gt;
-            &lt;%for(var i=0;i&lt;5;i++){%>
-                    <li><%=list[i]%></%=list[i]%></li>
-                <%}%&gt; &lt;="" ul&gt;="" &lt;%}else{%="">
-            <h2>没有list数据</h2>   
-        <%}%&gt; &lt;="" div&gt;="" script&gt;="" <="" code=""></%}%&gt;></%}%&gt;></code></pre> <!-- 模板1结束 -->
-<hr>
+</code></pre><p>调用方式与数据定义：</p>
 <pre><code>&lt;!-- 数据的定义和模板调用 --&gt;
   &lt;script type=&quot;text/javascript&quot;&gt;
     var data={
