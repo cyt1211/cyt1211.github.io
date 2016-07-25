@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>倒计时持续倒数 | Sunny Day</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Sunney Day,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+  
+
+  <meta name="description" content="倒计时问题问题：在含有倒计时的页面使用后，用户将浏览器切换到其他的页面，再返回该倒数页面，页面上继续倒数的时间和离开时的时间一样。办法：1.获取页面上的从后台获取到的最后的时间t12.将t1时间与当前时间进行比较，获取时间差diff_time3.在页面获取焦点时触发更新页面的倒计时时间。$(window).focus(function(){});">
+<meta property="og:type" content="article">
+<meta property="og:title" content="倒计时持续倒数">
+<meta property="og:url" content="http://yoursite.com/2016/07/25/count-down/index.html">
+<meta property="og:site_name" content="Sunny Day">
+<meta property="og:description" content="倒计时问题问题：在含有倒计时的页面使用后，用户将浏览器切换到其他的页面，再返回该倒数页面，页面上继续倒数的时间和离开时的时间一样。办法：1.获取页面上的从后台获取到的最后的时间t12.将t1时间与当前时间进行比较，获取时间差diff_time3.在页面获取焦点时触发更新页面的倒计时时间。$(window).focus(function(){});">
+<meta property="og:updated_time" content="2016-07-25T12:08:21.305Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="倒计时持续倒数">
+<meta name="twitter:description" content="倒计时问题问题：在含有倒计时的页面使用后，用户将浏览器切换到其他的页面，再返回该倒数页面，页面上继续倒数的时间和离开时的时间一样。办法：1.获取页面上的从后台获取到的最后的时间t12.将t1时间与当前时间进行比较，获取时间差diff_time3.在页面获取焦点时触发更新页面的倒计时时间。$(window).focus(function(){});">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-count-down" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">倒计时持续倒数</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.07.25</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>cyt</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://cyt123web.info/2016/07/25/count-down/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p><strong>倒计时问题</strong><br>问题：在含有倒计时的页面使用后，用户将浏览器切换到其他的页面，再返回该倒数页面，页面上继续倒数的时间和离开时的时间一样。<br>办法：<br>1.获取页面上的从后台获取到的最后的时间t1<br>2.将t1时间与当前时间进行比较，获取时间差diff_time<br>3.在页面获取焦点时触发更新页面的倒计时时间。<br>$(window).focus(function(){});</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/ewm-weixin.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'forsigner';
+    
+    var disqus_url = 'http://yoursite.com/2016/07/25/count-down/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//forsigner.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
