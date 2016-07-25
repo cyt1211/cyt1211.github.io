@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Sunny Day</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Sunney Day,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+  
+
+  <meta name="description" content="baiduTemplate的使用—百度JS模板引擎 baiduTemplate1.功能提供一套模板语法，用户可以写一个模板区块，每次根据传入的数据，生成对应数据产生的HTML片段，渲染不同的效果。
+
+2.特性1、语法简单，学习成本极低，开发效率提升很大，性价比较高（使用Javascript原生语法）；2、默认HTML转义（防XSS攻击），并且支持包括URL转义等多种转义；3、变量未定义自动输出为空">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sunny Day">
+<meta property="og:url" content="http://yoursite.com/2016/07/25/baidu-template/index.html">
+<meta property="og:site_name" content="Sunny Day">
+<meta property="og:description" content="baiduTemplate的使用—百度JS模板引擎 baiduTemplate1.功能提供一套模板语法，用户可以写一个模板区块，每次根据传入的数据，生成对应数据产生的HTML片段，渲染不同的效果。
+
+2.特性1、语法简单，学习成本极低，开发效率提升很大，性价比较高（使用Javascript原生语法）；2、默认HTML转义（防XSS攻击），并且支持包括URL转义等多种转义；3、变量未定义自动输出为空">
+<meta property="og:updated_time" content="2016-07-25T11:32:50.461Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sunny Day">
+<meta name="twitter:description" content="baiduTemplate的使用—百度JS模板引擎 baiduTemplate1.功能提供一套模板语法，用户可以写一个模板区块，每次根据传入的数据，生成对应数据产生的HTML片段，渲染不同的效果。
+
+2.特性1、语法简单，学习成本极低，开发效率提升很大，性价比较高（使用Javascript原生语法）；2、默认HTML转义（防XSS攻击），并且支持包括URL转义等多种转义；3、变量未定义自动输出为空">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#baiduTemplate的使用—百度JS模板引擎-baiduTemplate"><span class="toc-text">baiduTemplate的使用—百度JS模板引擎 baiduTemplate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">没有list数据</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-baidu-template" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">(no title)</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.07.25</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>cyt</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://cyt123web.info/2016/07/25/baidu-template/#disqus_thread"></a>
+        </span>
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="baiduTemplate的使用—百度JS模板引擎-baiduTemplate"><a href="#baiduTemplate的使用—百度JS模板引擎-baiduTemplate" class="headerlink" title="baiduTemplate的使用—百度JS模板引擎 baiduTemplate"></a>baiduTemplate的使用—百度JS模板引擎 baiduTemplate</h2><p>1.功能<br>提供一套模板语法，用户可以写一个模板区块，每次根据传入的数据，<br>生成对应数据产生的HTML片段，渲染不同的效果。</p>
+<hr>
+<p>2.特性<br>1、语法简单，学习成本极低，开发效率提升很大，性价比较高（使用Javascript原生语法）；<br>2、默认HTML转义（防XSS攻击），并且支持包括URL转义等多种转义；<br>3、变量未定义自动输出为空，防止页面错乱；<br>4、功能强大，如分隔符可自定等多种功能；</p>
+<hr>
+<p>3.举例<br>//直接复制即可使用，记得要下载baiduTemplate.js</p>
+<pre><code>&lt;!-- 引入baiduTemplate --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;./baiduTemplate.js&quot;&gt;&lt;/script&gt;
+</code></pre><hr>
+<pre><code>&lt;!-- 模板1开始，可以使用script（type设置为text/html）来存放模板片段，并且用id标示 --&gt;
+&lt;script id=&quot;t:_1234-abcd-1&quot; type=&quot;text/html&quot;&gt;
+&lt;div&gt;
+&lt;!-- 我是注释，语法均为Javascript原生语法，默认分割符为 &lt;% %&gt; ，也可以自定义，参见API部分   --&gt;
+    &lt;!-- 输出变量语句，输出title --&gt;
+    &lt;h1&gt;title:&lt;%=title%&gt;&lt;/h1&gt;
+    &lt;!-- 判断语句if else--&gt;
+    &lt;%if(list.length&gt;1) { %&gt;
+        &lt;h2&gt;输出list，共有&lt;%=list.length%&gt;个元素&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;!-- 循环语句 for--&gt;
+            &lt;%for(var i=0;i&lt;5;i++){%>
+                    <li><%=list[i]%></%=list[i]%></li>
+                <%}%&gt; &lt;="" ul&gt;="" &lt;%}else{%="">
+            <h2>没有list数据</h2>   
+        <%}%&gt; &lt;="" div&gt;="" script&gt;="" <="" code=""></%}%&gt;></%}%&gt;></code></pre> <!-- 模板1结束 -->
+<hr>
+<pre><code>&lt;!-- 数据的定义和模板调用 --&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    var data={
+        &quot;title&quot;:&apos;欢迎使用baiduTemplate&apos;,
+        &quot;list&quot;:[
+            &apos;test1:默认支持HTML转义，如输出&lt;script&gt;，也可以关掉，语法&lt;:=value&gt; 详见API&apos;,
+            &apos;test2:&apos;,
+            &apos;test3:&apos;,
+            &apos;test4:list[5]未定义，模板系统会输出空&apos;
+        ]
+    };
+
+    //使用baidu.template命名空间
+    var bt=baidu.template;
+
+    //可以设置分隔符
+    //bt.LEFT_DELIMITER=&apos;&lt;!&apos;;
+    //bt.RIGHT_DELIMITER=&apos;!&gt;&apos;;
+
+    //可以设置输出变量是否自动HTML转义
+    //bt.ESCAPE = false;
+
+    //最简使用方法
+    var html=bt(&apos;t:_1234-abcd-1&apos;,data);
+
+    //渲染
+    document.getElementById(&apos;result&apos;).innerHTML=html;
+    &lt;/script&gt;
+</code></pre><hr>
+<p>调用方法二：</p>
+<pre><code>var fun = baidu.template(tpl);
+//或直接传入id即可
+var fun = baidu.template(&apos;test1&apos;);
+
+//之后通过改变数据，调用缓存下来的函数，产生不同的HTML片段
+var html1 = fun(data1);
+var html2 = fun(data2);
+</code></pre><p>4、模板基本语法（默认分隔符为&lt;% %&gt;，也可以自定义）</p>
+<p>分隔符内语句为js语法，如：</p>
+<pre><code>&lt;% var test = function(){
+    //函数体
+};
+if(1){}else{};
+function testFun(){
+    return;
+};
+%&gt;
+</code></pre>
+    
+  </div>
+</article>
+
+</div>
+
+
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/ewm-weixin.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'forsigner';
+    
+    var disqus_url = 'http://yoursite.com/2016/07/25/baidu-template/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//forsigner.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
