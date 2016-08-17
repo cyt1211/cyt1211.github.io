@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>商品列表边框设置 | Sunny Day</title>
+  <title>window.open | Sunny Day</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,22 +15,31 @@
     <meta name="keywords" content="Sunney Day,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
   
 
-  <meta name="description" content="商品列表边框设置：一般商品列表都会有很多商品展示购买。在鼠标移入移出后都有不同效果的交互。对于鼠标移入，商品边缘增加解释信息，移出后没有解释信息。默认的情况下也不显示解释信息。
-&amp;lt;li style=&amp;quot;z-index:2;width:100px;height:10px;position:relative;&amp;quot;&amp;gt;
- &amp;lt;div style=&amp;quot;position">
+  <meta name="description" content="===========
+打开新的窗口不被浏览器拦截的办法
+function getStatus(id) {
+       var data = &amp;quot;&amp;quot;;
+       $.ajaxSettings.async = false; //请求前设置为同步请求
+       $.getJSON(&amp;apos;http://hd.fanhuan.com/ajax/url?id=&amp;apos;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="商品列表边框设置">
-<meta property="og:url" content="http://yoursite.com/2016/08/10/border-show/index.html">
+<meta property="og:title" content="window.open">
+<meta property="og:url" content="http://yoursite.com/2016/08/17/window-open/index.html">
 <meta property="og:site_name" content="Sunny Day">
-<meta property="og:description" content="商品列表边框设置：一般商品列表都会有很多商品展示购买。在鼠标移入移出后都有不同效果的交互。对于鼠标移入，商品边缘增加解释信息，移出后没有解释信息。默认的情况下也不显示解释信息。
-&amp;lt;li style=&amp;quot;z-index:2;width:100px;height:10px;position:relative;&amp;quot;&amp;gt;
- &amp;lt;div style=&amp;quot;position">
-<meta property="og:updated_time" content="2016-08-10T12:30:44.025Z">
+<meta property="og:description" content="===========
+打开新的窗口不被浏览器拦截的办法
+function getStatus(id) {
+       var data = &amp;quot;&amp;quot;;
+       $.ajaxSettings.async = false; //请求前设置为同步请求
+       $.getJSON(&amp;apos;http://hd.fanhuan.com/ajax/url?id=&amp;apos;">
+<meta property="og:updated_time" content="2016-08-17T13:15:37.504Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="商品列表边框设置">
-<meta name="twitter:description" content="商品列表边框设置：一般商品列表都会有很多商品展示购买。在鼠标移入移出后都有不同效果的交互。对于鼠标移入，商品边缘增加解释信息，移出后没有解释信息。默认的情况下也不显示解释信息。
-&amp;lt;li style=&amp;quot;z-index:2;width:100px;height:10px;position:relative;&amp;quot;&amp;gt;
- &amp;lt;div style=&amp;quot;position">
+<meta name="twitter:title" content="window.open">
+<meta name="twitter:description" content="===========
+打开新的窗口不被浏览器拦截的办法
+function getStatus(id) {
+       var data = &amp;quot;&amp;quot;;
+       $.ajaxSettings.async = false; //请求前设置为同步请求
+       $.getJSON(&amp;apos;http://hd.fanhuan.com/ajax/url?id=&amp;apos;">
 
   
 
@@ -95,22 +104,17 @@
 </div>
 
 
-  <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#商品列表边框设置："><span class="toc-text">商品列表边框设置：</span></a></li></ol>
-  </div>
-
 
 
 <div class="content content-post CENTER">
-   <article id="post-border-show" class="article article-type-post" itemprop="blogPost">
+   <article id="post-window-open" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">商品列表边框设置</h1>
+    <h1 class="post-title">window.open</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2016.08.10</span>
+        <span>2016.08.17</span>
       </span>
 
       
@@ -126,7 +130,7 @@
       
         <span>
           <i class="icon-comment"></i>
-          <a href="http://cyt123web.info/2016/08/10/border-show/#disqus_thread"></a>
+          <a href="http://cyt123web.info/2016/08/17/window-open/#disqus_thread"></a>
         </span>
       
 
@@ -135,17 +139,22 @@
 
   <div class="article-content">
     
-      <h2 id="商品列表边框设置："><a href="#商品列表边框设置：" class="headerlink" title="商品列表边框设置："></a>商品列表边框设置：</h2><p>一般商品列表都会有很多商品展示购买。<br>在鼠标移入移出后都有不同效果的交互。<br>对于鼠标移入，商品边缘增加解释信息，移出后没有解释信息。默认的情况下也不显示解释信息。</p>
-<pre><code>&lt;li style=&quot;z-index:2;width:100px;height:10px;position:relative;&quot;&gt;
- &lt;div style=&quot;position:absolute;width:100px;height:100px;z-index:3;&quot; class=&quot;content&quot;&gt;
-   ...
- &lt;/div&gt;
-&lt;/li&gt;
-</code></pre><p>在content里面设置mouseover和mouseleave设置边框等信息：（添加边框）</p>
-<pre><code>border：2px solid #000;
-top:-2px;
-left:-2px;
-</code></pre><p>如果是在li层设置添加border，在添加的一瞬间页面列表会抖动。</p>
+      <p>===========</p>
+<p>打开新的窗口不被浏览器拦截的办法</p>
+<pre><code>function getStatus(id) {
+       var data = &quot;&quot;;
+       $.ajaxSettings.async = false; //请求前设置为同步请求
+       $.getJSON(&apos;http://hd.fanhuan.com/ajax/url?id=&apos; + id + &quot;&amp;random=&quot; + getRandom(1000),                              data, function (data, state) {
+           $.ajaxSettings.async = true; //切记，请求完成之后要设置回异步
+           var result = data;
+           if (state == &apos;success&apos;) {
+               ...
+           } else {
+               alert(&quot;稍后重试~&quot;);
+           }
+       })
+   }
+</code></pre><p>$.ajaxSettings.async是全局变量，需要设置回异步。</p>
 
     
   </div>
@@ -220,7 +229,7 @@ left:-2px;
   <script>
     var disqus_shortname = 'forsigner';
     
-    var disqus_url = 'http://yoursite.com/2016/08/10/border-show/';
+    var disqus_url = 'http://yoursite.com/2016/08/17/window-open/';
     
     (function(){
       var dsq = document.createElement('script');

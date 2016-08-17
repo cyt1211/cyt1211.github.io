@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>商品列表边框设置 | Sunny Day</title>
+  <title>select下拉选择框--多级联动插件 | Sunny Day</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,22 +15,37 @@
     <meta name="keywords" content="Sunney Day,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
   
 
-  <meta name="description" content="商品列表边框设置：一般商品列表都会有很多商品展示购买。在鼠标移入移出后都有不同效果的交互。对于鼠标移入，商品边缘增加解释信息，移出后没有解释信息。默认的情况下也不显示解释信息。
-&amp;lt;li style=&amp;quot;z-index:2;width:100px;height:10px;position:relative;&amp;quot;&amp;gt;
- &amp;lt;div style=&amp;quot;position">
+  <meta name="description" content="===================
+使用说明：
+html：
+
+
+&amp;lt;span class=&amp;quot;col-sm-9&amp;quot;&amp;gt;
+&amp;lt;select class=&amp;quot;inline&amp;quot; name=&amp;quot;category&amp;quot; data-id=&amp;quot;1&amp;quot; style=&amp;quot;margin-top:5px;&amp;quot;&amp;gt;
+&amp;lt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="商品列表边框设置">
-<meta property="og:url" content="http://yoursite.com/2016/08/10/border-show/index.html">
+<meta property="og:title" content="select下拉选择框--多级联动插件">
+<meta property="og:url" content="http://yoursite.com/2016/08/17/select/index.html">
 <meta property="og:site_name" content="Sunny Day">
-<meta property="og:description" content="商品列表边框设置：一般商品列表都会有很多商品展示购买。在鼠标移入移出后都有不同效果的交互。对于鼠标移入，商品边缘增加解释信息，移出后没有解释信息。默认的情况下也不显示解释信息。
-&amp;lt;li style=&amp;quot;z-index:2;width:100px;height:10px;position:relative;&amp;quot;&amp;gt;
- &amp;lt;div style=&amp;quot;position">
-<meta property="og:updated_time" content="2016-08-10T12:30:44.025Z">
+<meta property="og:description" content="===================
+使用说明：
+html：
+
+
+&amp;lt;span class=&amp;quot;col-sm-9&amp;quot;&amp;gt;
+&amp;lt;select class=&amp;quot;inline&amp;quot; name=&amp;quot;category&amp;quot; data-id=&amp;quot;1&amp;quot; style=&amp;quot;margin-top:5px;&amp;quot;&amp;gt;
+&amp;lt;">
+<meta property="og:updated_time" content="2016-08-17T13:16:03.706Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="商品列表边框设置">
-<meta name="twitter:description" content="商品列表边框设置：一般商品列表都会有很多商品展示购买。在鼠标移入移出后都有不同效果的交互。对于鼠标移入，商品边缘增加解释信息，移出后没有解释信息。默认的情况下也不显示解释信息。
-&amp;lt;li style=&amp;quot;z-index:2;width:100px;height:10px;position:relative;&amp;quot;&amp;gt;
- &amp;lt;div style=&amp;quot;position">
+<meta name="twitter:title" content="select下拉选择框--多级联动插件">
+<meta name="twitter:description" content="===================
+使用说明：
+html：
+
+
+&amp;lt;span class=&amp;quot;col-sm-9&amp;quot;&amp;gt;
+&amp;lt;select class=&amp;quot;inline&amp;quot; name=&amp;quot;category&amp;quot; data-id=&amp;quot;1&amp;quot; style=&amp;quot;margin-top:5px;&amp;quot;&amp;gt;
+&amp;lt;">
 
   
 
@@ -97,20 +112,20 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#商品列表边框设置："><span class="toc-text">商品列表边框设置：</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用说明："><span class="toc-text">使用说明：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-js调用："><span class="toc-text"> 2. js调用：</span></a></li></ol>
   </div>
 
 
 
 <div class="content content-post CENTER">
-   <article id="post-border-show" class="article article-type-post" itemprop="blogPost">
+   <article id="post-select" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">商品列表边框设置</h1>
+    <h1 class="post-title">select下拉选择框--多级联动插件</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2016.08.10</span>
+        <span>2016.08.17</span>
       </span>
 
       
@@ -126,7 +141,7 @@
       
         <span>
           <i class="icon-comment"></i>
-          <a href="http://cyt123web.info/2016/08/10/border-show/#disqus_thread"></a>
+          <a href="http://cyt123web.info/2016/08/17/select/#disqus_thread"></a>
         </span>
       
 
@@ -135,17 +150,32 @@
 
   <div class="article-content">
     
-      <h2 id="商品列表边框设置："><a href="#商品列表边框设置：" class="headerlink" title="商品列表边框设置："></a>商品列表边框设置：</h2><p>一般商品列表都会有很多商品展示购买。<br>在鼠标移入移出后都有不同效果的交互。<br>对于鼠标移入，商品边缘增加解释信息，移出后没有解释信息。默认的情况下也不显示解释信息。</p>
-<pre><code>&lt;li style=&quot;z-index:2;width:100px;height:10px;position:relative;&quot;&gt;
- &lt;div style=&quot;position:absolute;width:100px;height:100px;z-index:3;&quot; class=&quot;content&quot;&gt;
-   ...
- &lt;/div&gt;
-&lt;/li&gt;
-</code></pre><p>在content里面设置mouseover和mouseleave设置边框等信息：（添加边框）</p>
-<pre><code>border：2px solid #000;
-top:-2px;
-left:-2px;
-</code></pre><p>如果是在li层设置添加border，在添加的一瞬间页面列表会抖动。</p>
+      <p>===================</p>
+<h2 id="使用说明："><a href="#使用说明：" class="headerlink" title="使用说明："></a>使用说明：</h2><ol>
+<li>html：</li>
+</ol>
+<hr>
+<pre><code>&lt;span class=&quot;col-sm-9&quot;&gt;
+&lt;select class=&quot;inline&quot; name=&quot;category&quot; data-id=&quot;1&quot; style=&quot;margin-top:5px;&quot;&gt;
+&lt;option value=&quot;-1&quot;&gt;请选择分类&lt;/option&gt;
+&lt;option value=&quot;0&quot;&gt;男装&lt;/option&gt;
+&lt;option value=&quot;1&quot;&gt;女装&lt;/option&gt;
+&lt;option value=&quot;2&quot;&gt;童装&lt;/option&gt;
+&lt;/select&gt;
+&lt;span id=&quot;select_next_content&quot;&gt;&lt;/span&gt;
+&lt;span id=&quot;alert0&quot; class=&quot;red inline&quot; style=&quot;margin-top:7px;&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+</code></pre><blockquote>
+<pre><code>页面默认添加一个select以及select_next_content的容器
+</code></pre></blockquote>
+<h2 id="2-js调用："><a href="#2-js调用：" class="headerlink" title=" 2. js调用："></a> 2. js调用：</h2><blockquote>
+<p> $(‘#select_next_content’).mutilCategory({<br>            categoryUrl: “”,//需要加载的url<br>        });</p>
+</blockquote>
+<p>url默认添加参数selected，将上一级选中的值传给下一级获取新的数据</p>
+<p>插件下载地址：</p>
+<blockquote>
+<p><a href="https://github.com/cyt1211/mutilCategory" target="_blank" rel="external">https://github.com/cyt1211/mutilCategory</a></p>
+</blockquote>
 
     
   </div>
@@ -220,7 +250,7 @@ left:-2px;
   <script>
     var disqus_shortname = 'forsigner';
     
-    var disqus_url = 'http://yoursite.com/2016/08/10/border-show/';
+    var disqus_url = 'http://yoursite.com/2016/08/17/select/';
     
     (function(){
       var dsq = document.createElement('script');
